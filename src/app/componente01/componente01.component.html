@@ -1,6 +1,20 @@
-<p class="primeiro">{{ name }}</p>
-<button (click)="trocarNome()">BUTÃO</button>
-<div>
-    <img [src]="imagem" alt="Descrição da Imagem">
+<div class="mainDiv">
+    <p class="primeiro">{{ name }}</p>
+    <div>
+        <button (click)="trocarNome()">BOTÃO Troca Nome</button>
+    </div>
+    <br>
+    <div>
+        <img [src]="imagem" alt="Descrição da Imagem">
+    </div>
+    <br>
+    <div>
+        <button
+        type="button"
+        [disabled]="isDisabled"
+        (click)="alerta()">BOTÃO Show Alert</button>
+    </div>
+    <app-componentngif></app-componentngif>
 </div>
+
 

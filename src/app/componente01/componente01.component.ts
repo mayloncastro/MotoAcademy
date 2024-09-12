@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+import { ComponentngifComponent } from "../componentngif/componentngif.component";
 
 @Component({
   selector: 'app-componente01',
   standalone: true,
-  imports: [],
+  imports: [ComponentngifComponent],
   templateUrl: './componente01.component.html',
   styleUrl: './componente01.component.css'
 })
 export class Componente01Component {
+  name1: string = "Maylon Castro";
   nomes: string[] = ['Maylon Castro', 'Ana Silva', 'João Santos', 'Maria Oliveira'];
 
   indiceAtual: number = 0;
@@ -15,7 +17,7 @@ export class Componente01Component {
   name: string = this.nomes[this.indiceAtual];
 
   alerta() {
-    alert(this.name)
+    alert(this.name1)
   }
 
   trocarNome() {
@@ -23,5 +25,7 @@ export class Componente01Component {
     this.name = this.nomes[this.indiceAtual];
   }
 
-  imagem: string = '/assets/cachorro.jpg';
+  imagem: string = './app/assets/cachorro.jpg';
+
+  isDisabled: boolean = false;
 }
